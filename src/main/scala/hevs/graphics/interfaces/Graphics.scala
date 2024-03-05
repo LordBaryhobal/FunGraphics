@@ -124,8 +124,23 @@ trait Graphics {
    * Width of the rectangle
    * @param height
    * Height of the rectangle
+   * @deprecated Use [[drawFilledRect]]
    */
+  @deprecatedName
   def drawFillRect(posX: Int, posY: Int, width: Int, height: Int): Unit
+  /**
+   * Draw a filled rectangle in the color selected with [[setColor]].
+   *
+   * @param posX
+   * X coordinate of the top left corner of the rectangle
+   * @param posY
+   * Y coordinate of the top left corner of the rectangle
+   * @param width
+   * Width of the rectangle
+   * @param height
+   * Height of the rectangle
+   */
+  def drawFilledRect(posX: Int, posY: Int, width: Int, height: Int): Unit
 
   /**
    * Draw an empty rectangle in the color selected with [[setColor]]
@@ -140,8 +155,17 @@ trait Graphics {
    *
    * @param rect
    * rectangle to draw
+   * @deprecated Use [[drawFilledRect]]
    */
+  @deprecatedName
   def drawFillRect(rect: Rectangle): Unit
+  /**
+   * Draw a filled rectangle in the color selected with [[setColor]].
+   *
+   * @param rect
+   * rectangle to draw
+   */
+  def drawFilledRect(rect: Rectangle): Unit
 
   /**
    * Draws a circle starting from <code>(Top left X, Top left Y)</code>

@@ -257,7 +257,12 @@ class FunGraphics(val width: Int, val height: Int, val xoffset: Int, val yoffset
     g2d.drawRect(posX, posY, width, height)
   }
 
+  @deprecatedName
   override def drawFillRect(posX: Int, posY: Int, width: Int, height: Int): Unit = {
+    g2d.fillRect(posX, posY, width, height)
+  }
+
+  override def drawFilledRect(posX: Int, posY: Int, width: Int, height: Int): Unit = {
     g2d.fillRect(posX, posY, width, height)
   }
 
@@ -265,7 +270,12 @@ class FunGraphics(val width: Int, val height: Int, val xoffset: Int, val yoffset
     g2d.drawRect(rect.getX.toInt, rect.y, rect.getWidth.toInt, rect.getHeight.toInt)
   }
 
+  @deprecatedName
   override def drawFillRect(rect: Rectangle): Unit = {
+    g2d.drawRect(rect.getX.toInt, rect.y, rect.getWidth.toInt, rect.getHeight.toInt)
+  }
+
+  override def drawFilledRect(rect: Rectangle): Unit = {
     g2d.drawRect(rect.getX.toInt, rect.y, rect.getWidth.toInt, rect.getHeight.toInt)
   }
 
